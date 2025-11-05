@@ -1,0 +1,45 @@
+
+---
+title: "Authentication in Documentation.AI"
+---
+
+## Overview
+
+Secure your documentation workflow with our authentication methods.
+
+<Callout kind="alert">
+Always keep your credentials secure.
+</Callout>
+
+## API Authentication
+
+Documentation.AI supports API key-based authentication to secure your data.
+
+<Request tabs="JavaScript,Python" show-lines="true">
+  ```javascript
+  const response = await fetch('/api/endpoint', {
+    headers: { 'Authorization': 'Bearer YOUR_API_KEY' }
+  });
+  ```
+  ```python
+  import requests
+  response = requests.get('/api/endpoint', headers={'Authorization': 'Bearer YOUR_API_KEY'})
+  ```
+</Request>
+
+## Managing API Keys
+
+1. **Generate Key**: Navigate to the 'API Keys' section in your dashboard.
+2. **Configure Permissions**: Set appropriate permissions for your key.
+3. **Secure Storage**: Store your key securely.
+
+<ParamField header="Authorization" param-type="string" required="true">
+  Bearer token for authentication.
+</ParamField>
+
+## Best Practices
+
+- Regularly rotate your API keys.
+- Use environment variables to manage sensitive information.
+
+For more details on authentication, visit our [Authentication Guide](/authentication/guide).
